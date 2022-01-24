@@ -3,6 +3,8 @@ from tqdm import tqdm
 from bloomberg import blp
 from config.settings import LOG
 from multiprocessing import Pool
+from config.settings import SESSION
+from bloomberg.model.models import DelistModel
 
 def start(ticker):
     try:
@@ -22,10 +24,14 @@ def start(ticker):
         LOG.logger.debug(f"{ticker}: {e}")
 
 if __name__ == "__main__":
-    indx = bloomberg.get_indx_members(security="KOSPI Index")
-    data = indx.to_dict()
-    tickers = list(map(lambda x: x['member_ticker_and_exchange_code'] + ' EQUITY', data))
+    session = SESSION()
+    results = session.query(DelistModel.Security_ID).filter(DelistModel.Declared_Date > "2022-01-01").all()
+    # indx = bloomberg.get_indx_members(security="KOSPI Index")
+    # data = indx.to_dict()
+    # tickers = list(map(lambda x: x['member_ticker_and_exchange_code'] + ' EQUITY', data))
+    tickers = list(map(lambda x: x[0], results))
     pool = Pool(processes=4)
     pool.map(start, tqdm(tickers))
     pool.close()
     pool.join()
+

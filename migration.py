@@ -5,7 +5,8 @@ from bloomberg.model.models import(
     PXOPENModel,
     PXLOWModel,
     PXVOLUMEModel,
-    PXHIGHModel
+    PXHIGHModel,
+    DelistModel
 )
 
 
@@ -15,3 +16,4 @@ PXOPENModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXLOWModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXVOLUMEModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXHIGHModel.__table__.create(bind=ENGINE, checkfirst=True)
+DelistModel.__table__.create(bind=ENGINE, checkfirst=True)

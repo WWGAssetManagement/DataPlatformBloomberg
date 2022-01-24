@@ -1,9 +1,5 @@
-from tkinter import image_names
-from numpy import var
-from pandas import DataFrame
 from sqlalchemy import Column, VARCHAR, DATETIME, Float, PrimaryKeyConstraint
 from config.settings import BASE
-from datetime import datetime
 
 
 class INDXMEMBERSModel(BASE):
@@ -65,4 +61,16 @@ class PXVOLUMEModel(BASE):
         PrimaryKeyConstraint(date, ticker),
         {},
     )
+
+class DelistModel(BASE):
+    __tablename__ = "tb_delist"
+    Action_Type = Column(VARCHAR(10))
+    Security_ID = Column(VARCHAR(20), primary_key=True)
+    Declared_Date = Column(DATETIME)
+    Effective_Date = Column(DATETIME)
+    Summary_1 = Column(VARCHAR(30))
+    Summary_2 = Column(VARCHAR(30))
+    Summary_3 = Column(VARCHAR(30))
+
+
 
