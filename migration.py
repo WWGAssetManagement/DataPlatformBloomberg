@@ -4,7 +4,8 @@ from bloomberg.model.models import(
     PXCLOSE1DModel,
     PXOPENModel,
     PXLOWModel,
-    PXVOLUMEModel
+    PXVOLUMEModel,
+    PXHIGHModel
 )
 
 
@@ -13,3 +14,4 @@ PXCLOSE1DModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXOPENModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXLOWModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXVOLUMEModel.__table__.create(bind=ENGINE, checkfirst=True)
+PXHIGHModel.__table__.create(bind=ENGINE, checkfirst=True)
