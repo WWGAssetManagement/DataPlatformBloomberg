@@ -25,3 +25,44 @@ class PXCLOSE1DModel(BASE):
         PrimaryKeyConstraint(date, ticker),
         {},
     )
+
+class PXOPENModel(BASE):
+    __tablename__ = "tb_px_open"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_OPEN = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class PXHIGHModel(BASE):
+    __tablename__ = "tb_px_high"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_HIGH = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class PXLOWModel(BASE):
+    __tablename__ = "tb_px_low"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_LOW = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class PXVOLUMEModel(BASE):
+    __tablename__ = "tb_px_volume"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_VOLUME = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
