@@ -1,1 +1,1 @@
-from bloomberg.bdh import *
+from bloomberg.blp import *

@@ -1,9 +1,9 @@
 from datetime import datetime
-from bloomberg.core.bds_base import BDHBase
+from bloomberg.core.blp_base import BLPBase
 from bloomberg.model.models import PXCLOSE1DModel
 from xbbg import blp
 
-class PX_CLOSE_1D(BDHBase):
+class PX_CLOSE_1D(BLPBase):
     """
     blp.bhs에서 PX_CLOSE_1D 필드의 값입니다. 
     """

@@ -1,9 +1,9 @@
 from datetime import datetime
-from bloomberg.core.bds_base import BDHBase
+from bloomberg.core.blp_base import BLPBase
 from bloomberg.model.models import INDXMEMBERSModel
 from xbbg import blp
 
-class INDX_MEMBERS(BDHBase):
+class INDX_MEMBERS(BLPBase):
     """
     blp.bhs에서 INDX_MEMBERS 필드의 값입니다. 
     """
