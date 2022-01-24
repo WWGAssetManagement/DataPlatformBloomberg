@@ -7,7 +7,7 @@ class BloombergDatabase:
     __table = None
     __conn = None
 
-    def __init__(self, model) -> None:
+    def __init__(self, model):
         self.__model = model
         self.__table = self.__get_table(model)
         self.__conn = ENGINE.connect()
@@ -21,4 +21,4 @@ class BloombergDatabase:
         :param dict_data like  [{'col1': 1, 'col2': 0.5}, {'col1': 2, 'col2': 0.75}]
         :return:
         """
-        self.conn.execute(self.table.insert().prefix_with("IGNORE"), dict_data)
+        self.__conn.execute(self.__table.insert().prefix_with("IGNORE"), dict_data)
