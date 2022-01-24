@@ -4,6 +4,7 @@ from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
 from bloomberg.blp.PX_OPEN import PX_OPEN
 from bloomberg.blp.PX_HIGH import PX_HIGH
 from bloomberg.blp.PX_LOW import PX_LOW
+from bloomberg.blp.PX_VOLUME import PX_VOLUME
 
 
 def get_indx_members(security, **kwargs):
@@ -26,3 +27,5 @@ def get_px_low(security, **kwargs):
     return PX_LOW(security=security, kwargs=kwargs)
 
 
+def get_px_volume(security, **kwargs):
+    return PX_VOLUME(security=security, kwargs=kwargs)
