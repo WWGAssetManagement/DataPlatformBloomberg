@@ -1,4 +1,5 @@
 from datetime import datetime
+from signal import raise_signal
 from unittest import result
 from bloomberg.core.bloomberg_database import BloombergDatabase 
 import pandas as pd 
@@ -24,6 +25,8 @@ class BDHBase(BloombergDatabase):
         results = blp.bds(self.security, self.field)
         results['date'] = datetime.now().strftime("%Y-%m-%d")
         results = results.reset_index().rename(columns={'index':'security'})
+        if len(results) == 0:
+            raise Exception("blp.bds의 security명이나 field명이 잘못되었습니다.")
         return results 
 
     def to_pandas(self):
