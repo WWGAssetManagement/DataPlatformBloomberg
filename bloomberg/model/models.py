@@ -73,4 +73,12 @@ class DelistModel(BASE):
     Summary_3 = Column(VARCHAR(30))
 
 
-
+class ERNANNDTANDPERModel(BASE):
+    __tablename__ = "tb_ern_ann_dt_and_per"
+    ticker = Column(VARCHAR(20))
+    earnings_announcement_date =  Column(DATETIME)	
+    earnings_year_and_period = Column(VARCHAR(10))
+    __table_args = (
+        PrimaryKeyConstraint(ticker, earnings_announcement_date),
+        {},
+    )
