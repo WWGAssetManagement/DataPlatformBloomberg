@@ -1,4 +1,5 @@
 import imp
+from bloomberg.blp.ERN_ANN_DT_AND_PER import ERN_ANN_DT_AND_PER
 from bloomberg.blp.INDX_MEMBERS import INDX_MEMBERS
 from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
 from bloomberg.blp.PX_OPEN import PX_OPEN
@@ -29,3 +30,7 @@ def get_px_low(security, **kwargs):
 
 def get_px_volume(security, **kwargs):
     return PX_VOLUME(security=security, kwargs=kwargs)
+
+
+def get_ern_ann_dt_and_per(security, **kwargs):
+    return ERN_ANN_DT_AND_PER(security=security, kwargs=kwargs)
