@@ -82,3 +82,26 @@ class ERNANNDTANDPERModel(BASE):
         PrimaryKeyConstraint(ticker, earnings_announcement_date),
         {},
     )
+
+class GICSSectorNameModel(BASE):
+    __tablename__ = "tb_gics_sector_name"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))
+
+
+class GICSINDUSTRYNAMEModel(BASE):
+    __tablename__ = "tb_gics_industry_name"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))
+
+
+class GICSSectorModel(BASE):
+    __tablename__ = "tb_gics_sector"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))
+
+
+class GICSIndustryModel(BASE):
+    __tablename__ = "tb_gics_industry"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))

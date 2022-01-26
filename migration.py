@@ -7,7 +7,11 @@ from bloomberg.model.models import(
     PXVOLUMEModel,
     PXHIGHModel,
     DelistModel,
-    ERNANNDTANDPERModel
+    ERNANNDTANDPERModel,
+    GICSSectorNameModel,
+    GICSINDUSTRYNAMEModel,
+    GICSSectorModel,
+    GICSIndustryModel,
 )
 
 
@@ -19,3 +23,7 @@ PXVOLUMEModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXHIGHModel.__table__.create(bind=ENGINE, checkfirst=True)
 DelistModel.__table__.create(bind=ENGINE, checkfirst=True)
 ERNANNDTANDPERModel.__table__.create(bind=ENGINE, checkfirst=True)
+GICSSectorNameModel.__table__.create(bind=ENGINE, checkfirst=True)
+GICSINDUSTRYNAMEModel.__table__.create(bind=ENGINE, checkfirst=True)
+GICSSectorModel.__table__.create(bind=ENGINE, checkfirst=True)
+GICSIndustryModel.__table__.create(bind=ENGINE, checkfirst=True)

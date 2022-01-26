@@ -1,4 +1,6 @@
 import imp
+
+from numpy import kaiser
 from bloomberg.blp.ERN_ANN_DT_AND_PER import ERN_ANN_DT_AND_PER
 from bloomberg.blp.INDX_MEMBERS import INDX_MEMBERS
 from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
@@ -6,6 +8,10 @@ from bloomberg.blp.PX_OPEN import PX_OPEN
 from bloomberg.blp.PX_HIGH import PX_HIGH
 from bloomberg.blp.PX_LOW import PX_LOW
 from bloomberg.blp.PX_VOLUME import PX_VOLUME
+from bloomberg.blp.GICS_SECTOR_NAME import GICS_SECTOR_NAME
+from bloomberg.blp.GICS_INDUSTRY_NAME import GICS_INDUSTRY_NAME
+from bloomberg.blp.GICS_SECTOR import GICS_SECTOR
+from bloomberg.blp.GICS_INDUSTRY import GICS_INDUSTRY
 
 
 def get_indx_members(security, **kwargs):
@@ -34,3 +40,19 @@ def get_px_volume(security, **kwargs):
 
 def get_ern_ann_dt_and_per(security, **kwargs):
     return ERN_ANN_DT_AND_PER(security=security, kwargs=kwargs)
+
+
+def get_gics_sector_name(security, **kwargs):
+    return GICS_SECTOR_NAME(security=security, kwargs=kwargs)
+
+
+def get_gics_industry_name(security, **kwargs):
+    return GICS_INDUSTRY_NAME(security=security, kwargs=kwargs)
+
+
+def get_gics_sector(security, **kwargs):
+    return GICS_SECTOR(security=security, kwargs=kwargs)
+
+
+def get_gics_industry(security, **kwargs):
+    return GICS_INDUSTRY(security=security, kwargs=kwargs)
