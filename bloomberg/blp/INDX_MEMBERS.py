@@ -16,6 +16,6 @@ class INDX_MEMBERS(BLPBase):
     def _get(self):
         self.results = blp.bds(self.security, self.field)
         self.results['date'] = datetime.now().strftime("%Y-%m-%d")
-        self.results.reset_index().rename(columns={'index':'security'})
+        self.results = self.results.reset_index().rename(columns={'index':'security'})
 
 
