@@ -12,6 +12,11 @@ from bloomberg.model.models import(
     GICSINDUSTRYNAMEModel,
     GICSSectorModel,
     GICSIndustryModel,
+    IDCusipModel,
+    NETOPERPROFITAFTERTAXModel,
+    SECURITYNAMEModel,
+    PXTOBOOKRATIOModel,
+    PERATIOModel
 )
 
 
@@ -27,3 +32,8 @@ GICSSectorNameModel.__table__.create(bind=ENGINE, checkfirst=True)
 GICSINDUSTRYNAMEModel.__table__.create(bind=ENGINE, checkfirst=True)
 GICSSectorModel.__table__.create(bind=ENGINE, checkfirst=True)
 GICSIndustryModel.__table__.create(bind=ENGINE, checkfirst=True)
+IDCusipModel.__table__.create(bind=ENGINE, checkfirst=True)
+NETOPERPROFITAFTERTAXModel.__table__.create(bind=ENGINE, checkfirst=True)
+SECURITYNAMEModel.__table__.create(bind=ENGINE, checkfirst=True)
+PXTOBOOKRATIOModel.__table__.create(bind=ENGINE, checkfirst=True)
+PERATIOModel.__table__.create(bind=ENGINE, checkfirst=True)

@@ -1,3 +1,4 @@
+from inspect import CO_ASYNC_GENERATOR
 from sqlalchemy import Column, VARCHAR, DATETIME, Float, PrimaryKeyConstraint
 from config.settings import BASE
 
@@ -62,6 +63,16 @@ class PXVOLUMEModel(BASE):
         {},
     )
 
+class NETOPERPROFITAFTERTAXModel(BASE):
+    __tablename__ = "tb_net_oper_profit_after_tax"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    NET_OPER_PROFIT_AFTER_TAX = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
 class DelistModel(BASE):
     __tablename__ = "tb_delist"
     Action_Type = Column(VARCHAR(10))
@@ -105,3 +116,35 @@ class GICSIndustryModel(BASE):
     __tablename__ = "tb_gics_industry"
     ticker = Column(VARCHAR(20), primary_key=True)
     value = Column(VARCHAR(20))
+
+
+class IDCusipModel(BASE):
+    __tablename__ = "tb_id_cusip"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))
+
+class SECURITYNAMEModel(BASE):
+    __tablename__ = "tb_security_name"
+    ticker = Column(VARCHAR(20), primary_key=True)
+    value = Column(VARCHAR(20))
+
+class PXTOBOOKRATIOModel(BASE):
+    __tablename__ = "tb_px_to_book_ratio"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_TO_BOOK_RATIO = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class PERATIOModel(BASE):
+    __tablename__ = "tb_pe_ratio"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PE_RATIO = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+    
