@@ -1,9 +1,8 @@
 from doctest import BLANKLINE_MARKER
-from fileinput import close
 import bloomberg
 from tqdm import tqdm
 from config.settings import LOG
-
+from datetime import datetime, timedelta
 
 index_tickers = [
     "KOSPI INDEX",
@@ -18,8 +17,12 @@ index_tickers = [
     "SENSEX INDEX"
     ]
 
-start_date = '20000101'
-end_date = '20220220'
+
+now = datetime.now()
+
+start_date = (now - timedelta(days=5)).strftime('%Y%m%d')
+end_date = now.strftime("%Y%m%d")
+LOG.logger.debug(f"인덱스 데이터 수집 시작: {start_date}~{end_date}")
 
 for ticker in tqdm(index_tickers):
     try:
