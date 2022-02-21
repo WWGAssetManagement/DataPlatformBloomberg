@@ -10,7 +10,7 @@ class SECURITY_NAME(BLPBase):
     """
 
     def __init__(self, security, **kwargs):
-        super().__init__(security, self.__class__.__name__, SECURITYNAMEModel, **kwargs)
+        super().__init__(security, self.__class__.__name__, SECURITYNAMEModel, kwargs)
         self._get()      
         self._check_results() 
 
