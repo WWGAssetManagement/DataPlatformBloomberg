@@ -1,6 +1,3 @@
-import imp
-
-from numpy import kaiser
 from bloomberg.blp.ERN_ANN_DT_AND_PER import ERN_ANN_DT_AND_PER
 from bloomberg.blp.INDX_MEMBERS import INDX_MEMBERS
 from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
@@ -15,6 +12,7 @@ from bloomberg.blp.GICS_INDUSTRY import GICS_INDUSTRY
 from bloomberg.blp.ID_CUSIP import ID_CUSIP
 from bloomberg.blp.NET_OPER_PROFIT_AFTER_TAX import NET_OPER_PROFIT_AFTER_TAX
 from bloomberg.blp.SECURITY_NAME import SECURITY_NAME
+from bloomberg.blp.PE_RATIO import PE_RATIO
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -43,6 +41,8 @@ def get_px_volume(security, **kwargs):
 def get_ern_ann_dt_and_per(security, **kwargs):
     return ERN_ANN_DT_AND_PER(security=security, kwargs=kwargs)
 
+def get_pe_ratio(security, **kwargs):
+    return PE_RATIO(security=security, kwargs=kwargs)
 
 def get_gics_sector_name(security, **kwargs):
     return GICS_SECTOR_NAME(security=security, kwargs=kwargs)
@@ -70,4 +70,3 @@ def get_net_oper_profit_after_tax(security, **kwargs):
 
 def get_security_name(security, **kwargs):
     return SECURITY_NAME(security=security, kwargs=kwargs)
-    
