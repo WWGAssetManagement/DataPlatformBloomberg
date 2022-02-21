@@ -14,6 +14,7 @@ from bloomberg.blp.GICS_SECTOR import GICS_SECTOR
 from bloomberg.blp.GICS_INDUSTRY import GICS_INDUSTRY
 from bloomberg.blp.ID_CUSIP import ID_CUSIP
 from bloomberg.blp.NET_OPER_PROFIT_AFTER_TAX import NET_OPER_PROFIT_AFTER_TAX
+from bloomberg.blp.SECURITY_NAME import SECURITY_NAME
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -65,3 +66,8 @@ def get_id_cusip(security, **kwargs):
 
 def get_net_oper_profit_after_tax(security, **kwargs):
     return NET_OPER_PROFIT_AFTER_TAX(security=security, kwargs=kwargs)
+
+
+def get_security_name(security, **kwargs):
+    return SECURITY_NAME(security=security, kwargs=kwargs)
+    
