@@ -13,6 +13,7 @@ from bloomberg.blp.ID_CUSIP import ID_CUSIP
 from bloomberg.blp.NET_OPER_PROFIT_AFTER_TAX import NET_OPER_PROFIT_AFTER_TAX
 from bloomberg.blp.SECURITY_NAME import SECURITY_NAME
 from bloomberg.blp.PE_RATIO import PE_RATIO
+from bloomberg.blp.PX_TO_BOOK_RATIO import PX_TO_BOOK_RATIO
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -43,6 +44,9 @@ def get_ern_ann_dt_and_per(security, **kwargs):
 
 def get_pe_ratio(security, **kwargs):
     return PE_RATIO(security=security, kwargs=kwargs)
+
+def get_px_to_book_ratio(security, **kwargs):
+    return PX_TO_BOOK_RATIO(security=security, kwargs=kwargs)
 
 def get_gics_sector_name(security, **kwargs):
     return GICS_SECTOR_NAME(security=security, kwargs=kwargs)
