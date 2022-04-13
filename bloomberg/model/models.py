@@ -23,6 +23,16 @@ class PXCLOSE1DModel(BASE):
         {},
     )
 
+class PXLASTModel(BASE):
+    __tablename__ = "tb_px_last"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    PX_LAST = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
 class PXOPENModel(BASE):
     __tablename__ = "tb_px_open"
     date = Column(DATETIME)
@@ -148,3 +158,32 @@ class PERATIOModel(BASE):
         {},
     )
     
+class NETINCOMEModel(BASE):
+    __tablename__ = "tb_net_income"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    NET_INCOME = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class EBITModel(BASE):
+    __tablename__ = "tb_ebit"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    EBIT = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class RETURNONCAPITALADJUSTEDModel(BASE):
+    __tablename__ = "tb_return_on_capital_adjusted"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    RETURN_ON_CAPITAL_ADJUSTED = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )

@@ -2,6 +2,7 @@ from config.settings import ENGINE
 from bloomberg.model.models import(
     INDXMEMBERSModel, 
     PXCLOSE1DModel,
+    PXLASTModel,
     PXOPENModel,
     PXLOWModel,
     PXVOLUMEModel,
@@ -16,7 +17,10 @@ from bloomberg.model.models import(
     NETOPERPROFITAFTERTAXModel,
     SECURITYNAMEModel,
     PXTOBOOKRATIOModel,
-    PERATIOModel
+    PERATIOModel,
+    NETINCOMEModel,
+    EBITModel,
+    RETURNONCAPITALADJUSTEDModel,
 )
 
 
@@ -37,3 +41,7 @@ NETOPERPROFITAFTERTAXModel.__table__.create(bind=ENGINE, checkfirst=True)
 SECURITYNAMEModel.__table__.create(bind=ENGINE, checkfirst=True)
 PXTOBOOKRATIOModel.__table__.create(bind=ENGINE, checkfirst=True)
 PERATIOModel.__table__.create(bind=ENGINE, checkfirst=True)
+PXLASTModel.__table__.create(bind=ENGINE, checkfirst=True)
+NETINCOMEModel.__table__.create(bind=ENGINE, checkfirst=True)
+EBITModel.__table__.create(bind=ENGINE, checkfirst=True)
+RETURNONCAPITALADJUSTEDModel.__table__.create(bind=ENGINE, checkfirst=True)

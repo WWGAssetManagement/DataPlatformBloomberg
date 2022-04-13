@@ -1,3 +1,4 @@
+import imp
 from bloomberg.blp.ERN_ANN_DT_AND_PER import ERN_ANN_DT_AND_PER
 from bloomberg.blp.INDX_MEMBERS import INDX_MEMBERS
 from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
@@ -14,6 +15,10 @@ from bloomberg.blp.NET_OPER_PROFIT_AFTER_TAX import NET_OPER_PROFIT_AFTER_TAX
 from bloomberg.blp.SECURITY_NAME import SECURITY_NAME
 from bloomberg.blp.PE_RATIO import PE_RATIO
 from bloomberg.blp.PX_TO_BOOK_RATIO import PX_TO_BOOK_RATIO
+from bloomberg.blp.PX_LAST import PX_LAST
+from bloomberg.blp.NET_INCOME import NET_INCOME
+from bloomberg.blp.EBIT import EBIT
+from bloomberg.blp.RETURN_ON_CAPITAL_ADJUSTED import RETURN_ON_CAPITAL_ADJUSTED
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -21,6 +26,10 @@ def get_indx_members(security, **kwargs):
 
 def get_px_close_1d(security, **kwargs):
     return PX_CLOSE_1D(security=security, kwargs=kwargs)
+
+
+def get_px_last(sercurity, **kwargs):
+    return PX_LAST(security=sercurity, kwargs=kwargs)
 
 
 def get_px_open(security, **kwargs):
@@ -47,6 +56,15 @@ def get_pe_ratio(security, **kwargs):
 
 def get_px_to_book_ratio(security, **kwargs):
     return PX_TO_BOOK_RATIO(security=security, kwargs=kwargs)
+
+def get_net_income(security, **kwargs):
+    return NET_INCOME(security=security, kwargs=kwargs)
+
+def get_ebit(security, **kwargs):
+    return EBIT(security=security, kwargs=kwargs)
+
+def get_return_on_capital_adjusted(security, **kwargs):
+    return RETURN_ON_CAPITAL_ADJUSTED(security=security, kwargs=kwargs)
 
 def get_gics_sector_name(security, **kwargs):
     return GICS_SECTOR_NAME(security=security, kwargs=kwargs)
