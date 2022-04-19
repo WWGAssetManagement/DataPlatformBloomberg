@@ -19,6 +19,10 @@ from bloomberg.blp.PX_LAST import PX_LAST
 from bloomberg.blp.NET_INCOME import NET_INCOME
 from bloomberg.blp.EBIT import EBIT
 from bloomberg.blp.RETURN_ON_CAPITAL_ADJUSTED import RETURN_ON_CAPITAL_ADJUSTED
+from bloomberg.blp.ARDR_DEPRECIATION_EXP import ARDR_DEPRECIATION_EXP
+from bloomberg.blp.CAPITAL_EXPEND import CAPITAL_EXPEND
+from bloomberg.blp.NON_CASH_WORKING_CAPITAL import NON_CASH_WORKING_CAPITAL
+from bloomberg.blp.TOTAL_INVESTED_CAPITAL import TOTAL_INVESTED_CAPITAL
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -54,11 +58,23 @@ def get_ern_ann_dt_and_per(security, **kwargs):
 def get_pe_ratio(security, **kwargs):
     return PE_RATIO(security=security, kwargs=kwargs)
 
+def get_non_cash_working_capital(security, **kwargs):
+    return NON_CASH_WORKING_CAPITAL(security=security, kwargs=kwargs)
+
 def get_px_to_book_ratio(security, **kwargs):
     return PX_TO_BOOK_RATIO(security=security, kwargs=kwargs)
 
+def get_total_invested_capital(security, **kwargs):
+    return TOTAL_INVESTED_CAPITAL(security=security, kwargs=kwargs)
+
 def get_net_income(security, **kwargs):
     return NET_INCOME(security=security, kwargs=kwargs)
+
+def get_ardr_depreciation_exp(security, **kwargs):
+    return ARDR_DEPRECIATION_EXP(security=security, kwargs=kwargs)
+
+def get_capital_expend(security, **kwargs):
+    return CAPITAL_EXPEND(security=security, kwargs=kwargs)
 
 def get_ebit(security, **kwargs):
     return EBIT(security=security, kwargs=kwargs)

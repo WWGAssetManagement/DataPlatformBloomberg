@@ -21,6 +21,10 @@ from bloomberg.model.models import(
     NETINCOMEModel,
     EBITModel,
     RETURNONCAPITALADJUSTEDModel,
+    ARDRDEPRECIATIONEXPModel,
+    CAPITALEXPENDModel,
+    NONCASHWORKINGCAPITALModel,
+    TOTALINVESTEDCAPITALModel,
 )
 
 
@@ -45,3 +49,7 @@ PXLASTModel.__table__.create(bind=ENGINE, checkfirst=True)
 NETINCOMEModel.__table__.create(bind=ENGINE, checkfirst=True)
 EBITModel.__table__.create(bind=ENGINE, checkfirst=True)
 RETURNONCAPITALADJUSTEDModel.__table__.create(bind=ENGINE, checkfirst=True)
+ARDRDEPRECIATIONEXPModel.__table__.create(bind=ENGINE, checkfirst=True)
+CAPITALEXPENDModel.__table__.create(bind=ENGINE, checkfirst=True)
+NONCASHWORKINGCAPITALModel.__table__.create(bind=ENGINE, checkfirst=True)
+TOTALINVESTEDCAPITALModel.__table__.create(bind=ENGINE, checkfirst=True)

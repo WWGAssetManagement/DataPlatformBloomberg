@@ -187,3 +187,43 @@ class RETURNONCAPITALADJUSTEDModel(BASE):
         PrimaryKeyConstraint(date, ticker),
         {},
     )
+
+class ARDRDEPRECIATIONEXPModel(BASE):
+    __tablename__ = "tb_ardr_depreciation_exp"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    ARDR_DEPRECIATION_EXP = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class CAPITALEXPENDModel(BASE):
+    __tablename__ = "tb_capital_expend"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    CAPITAL_EXPEND = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class NONCASHWORKINGCAPITALModel(BASE):
+    __tablename__ = "tb_non_cash_working_capital"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    NON_CASH_WORKING_CAPITAL = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class TOTALINVESTEDCAPITALModel(BASE):
+    __tablename__ = "tb_total_invested_capital"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    TOTAL_INVESTED_CAPITAL = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
