@@ -1,4 +1,3 @@
-from inspect import CO_ASYNC_GENERATOR
 from sqlalchemy import Column, VARCHAR, DATETIME, Float, PrimaryKeyConstraint
 from config.settings import BASE
 
@@ -223,6 +222,89 @@ class TOTALINVESTEDCAPITALModel(BASE):
     date = Column(DATETIME)
     ticker = Column(VARCHAR(20))
     TOTAL_INVESTED_CAPITAL = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class EVEBITDAADJUSTEDModel(BASE):
+    __tablename__ = "tb_ev_ebitda_adjusted"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    EV_EBITDA_ADJUSTED = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class EBITDAModel(BASE):
+    __tablename__ = "tb_ebitda"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    EBITDA = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+
+class CURMKTCAPModel(BASE):
+    __tablename__ = "tb_cur_mkt_cap"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    CUR_MKT_CAP = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+
+class BESTEVModel(BASE):
+    __tablename__ = "tb_best_ev"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    BEST_EV = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class CRNCYADJCURREVModel(BASE):
+    __tablename__ = "tb_crncy_adj_curr_ev"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    CRNCY_ADJ_CURR_EV = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class EBITDAADJUSTEDModel(BASE):
+    __tablename__ = "tb_ebitda_adjusted"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    EBITDA_ADJUSTED = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+
+class CURRENTPVALModel(BASE):
+    __tablename__ = "tb_current_entp_val"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    CURR_ENTP_VAL = Column(Float)
+    __table_args__ = (
+        PrimaryKeyConstraint(date, ticker),
+        {},
+    )
+
+class TRAIL12MEBITDAModel(BASE):
+    __tablename__ = "tb_trail_12m_ebitda"
+    date = Column(DATETIME)
+    ticker = Column(VARCHAR(20))
+    TRAIL_12M_EBITDA = Column(Float)
     __table_args__ = (
         PrimaryKeyConstraint(date, ticker),
         {},

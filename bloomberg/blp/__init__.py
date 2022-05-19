@@ -1,4 +1,5 @@
 import imp
+from bloomberg.blp.CURR_ENTP_VAL import CURR_ENTP_VAL
 from bloomberg.blp.ERN_ANN_DT_AND_PER import ERN_ANN_DT_AND_PER
 from bloomberg.blp.INDX_MEMBERS import INDX_MEMBERS
 from bloomberg.blp.PX_CLOSE_1D import PX_CLOSE_1D
@@ -23,6 +24,13 @@ from bloomberg.blp.ARDR_DEPRECIATION_EXP import ARDR_DEPRECIATION_EXP
 from bloomberg.blp.CAPITAL_EXPEND import CAPITAL_EXPEND
 from bloomberg.blp.NON_CASH_WORKING_CAPITAL import NON_CASH_WORKING_CAPITAL
 from bloomberg.blp.TOTAL_INVESTED_CAPITAL import TOTAL_INVESTED_CAPITAL
+from bloomberg.blp.EV_EBITDA_ADJUSTED import EV_EBITDA_ADJUSTED
+from bloomberg.blp.EBITDA import EBITDA
+from bloomberg.blp.CUR_MKT_CAP import CUR_MKT_CAP
+from bloomberg.blp.BEST_EV import BEST_EV
+from bloomberg.blp.CRNCY_ADJ_CURR_EV import CRNCY_ADJ_CURR_EV
+from bloomberg.blp.EBITDA_ADJUSTED import EBITDA_ADJUSTED
+from bloomberg.blp.TRAIL_12M_EBITDA import TRAIL_12M_EBITDA
 
 def get_indx_members(security, **kwargs):
     return INDX_MEMBERS(security=security, kwargs=kwargs)
@@ -52,8 +60,27 @@ def get_px_volume(security, **kwargs):
     return PX_VOLUME(security=security, kwargs=kwargs)
 
 
+def get_cur_mkt_cap(security, **kwargs):
+    return CUR_MKT_CAP(security=security, kwargs=kwargs)
+
+
 def get_ern_ann_dt_and_per(security, **kwargs):
     return ERN_ANN_DT_AND_PER(security=security, kwargs=kwargs)
+
+def get_best_ev(security, **kwargs):
+    return BEST_EV(security=security, kwargs=kwargs)
+
+def get_ebitda_adjusted(security, **kwargs):
+    return EBITDA_ADJUSTED(security=security, kwargs=kwargs)
+
+def get_trail_12m_ebitda(security, **kwargs):
+    return TRAIL_12M_EBITDA(security=security, kwargs=kwargs)
+
+def get_crncy_adj_curr_ev(security, **kwargs):
+    return CRNCY_ADJ_CURR_EV(security=security, kwargs=kwargs)
+
+def get_curr_entp_val(security, **kwargs):
+    return CURR_ENTP_VAL(security=security, kwargs=kwargs)
 
 def get_pe_ratio(security, **kwargs):
     return PE_RATIO(security=security, kwargs=kwargs)
@@ -78,6 +105,12 @@ def get_capital_expend(security, **kwargs):
 
 def get_ebit(security, **kwargs):
     return EBIT(security=security, kwargs=kwargs)
+
+def get_ebitda(security, **kwargs):
+    return EBITDA(security=security, kwargs=kwargs)
+
+def get_ev_ebitda_adjusted(security, **kwargs):
+    return EV_EBITDA_ADJUSTED(security=security, kwargs=kwargs)
 
 def get_return_on_capital_adjusted(security, **kwargs):
     return RETURN_ON_CAPITAL_ADJUSTED(security=security, kwargs=kwargs)

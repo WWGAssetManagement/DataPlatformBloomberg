@@ -25,6 +25,14 @@ from bloomberg.model.models import(
     CAPITALEXPENDModel,
     NONCASHWORKINGCAPITALModel,
     TOTALINVESTEDCAPITALModel,
+    EVEBITDAADJUSTEDModel,
+    EBITDAModel,
+    CURMKTCAPModel,
+    BESTEVModel,
+    CRNCYADJCURREVModel,
+    EBITDAADJUSTEDModel,
+    CURRENTPVALModel,
+    TRAIL12MEBITDAModel,
 )
 
 
@@ -53,3 +61,11 @@ ARDRDEPRECIATIONEXPModel.__table__.create(bind=ENGINE, checkfirst=True)
 CAPITALEXPENDModel.__table__.create(bind=ENGINE, checkfirst=True)
 NONCASHWORKINGCAPITALModel.__table__.create(bind=ENGINE, checkfirst=True)
 TOTALINVESTEDCAPITALModel.__table__.create(bind=ENGINE, checkfirst=True)
+EVEBITDAADJUSTEDModel.__table__.create(bind=ENGINE, checkfirst=True)
+EBITDAModel.__table__.create(bind=ENGINE, checkfirst=True)
+CURMKTCAPModel.__table__.create(bind=ENGINE, checkfirst=True)
+BESTEVModel.__table__.create(bind=ENGINE, checkfirst=True)
+CRNCYADJCURREVModel.__table__.create(bind=ENGINE, checkfirst=True)
+EBITDAADJUSTEDModel.__table__.create(bind=ENGINE, checkfirst=True)
+CURRENTPVALModel.__table__.create(bind=ENGINE, checkfirst=True)
+TRAIL12MEBITDAModel.__table__.create(bind=ENGINE, checkfirst=True)
